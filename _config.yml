@@ -1,21 +1,12 @@
-title:            Tw93
-description:      "Hi，我是 Tw93，是一个前端工程师，会一点 Swift / Rust / Python，喜欢折腾各种新技术。"
+title:            blog of eric yang
+description:      "Hi，我是 eric yang，是一个软件工程师，欢迎来到我的博客。"
 
-github: tw93
-zhihu: tw93
-twitter: HiTw93
-v2ex: tw93
-
-url: https://tw93.fun
+url: https://blog.fire-eyes.com
 menu:
   - title: 'Categories'
     url: '/categories.html'
   - title: 'About'
     url: '/about'
-  - title: 'Weekly'
-    url: 'https://weekly.tw93.fun/'
-  - title: 'Github'
-    url: 'https://github.com/tw93'
   - title: 'RSS'
     url: '/feed.xml'
 
@@ -30,12 +21,12 @@ sass:
   style: compressed
 
 permalink:   /:year-:month-:day/:title.html
-assetUrl: //tw93.fun/images/
+assetUrl: //blog.fire-eyes.com/images/
 defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 
-google_analytics: UA-57207999-1
-baidu_verify: kxGpkpWG7G
-google_verify: DbapjTyfmMvvmkuA1GiGcXMqgPQrtgxeUTGY-MrEOYw
+#google_analytics: 
+#baidu_verify: 
+#google_verify: 
 
 paginate: 10
 post_ext: md
