@@ -8,7 +8,7 @@ import requests
 from github import Github
 
 
-# 20 for test 12 real get up
+# 2 for test 1 real get up
 GET_UP_ISSUE_NUMBER = 1
 GET_UP_MESSAGE_TEMPLATE = "今天的起床时间是--{get_up_time}.\r\n\r\n 起床啦，喝杯咖啡，背个单词，去跑步。\r\n\r\n 今天的一句诗:\r\n {sentence} \r\n"
 SENTENCE_API = "https://v1.jinrishici.com/all"
@@ -98,9 +98,7 @@ def make_get_up_message():
 def main(
     github_token,
     repo_name,
-    weather_message,
-    tele_token,
-    tele_chat_id,
+    weather_message
 ):
     u = login(github_token)
     repo = u.get_repo(repo_name)
@@ -117,18 +115,6 @@ def main(
     if is_get_up_early:
         comment = body + f"![image]({link_for_issue})"
         issue.create_comment(comment)
-        # send to telegram
-        if tele_token and tele_chat_id:
-            requests.post(
-                url="https://api.telegram.org/bot{0}/{1}".format(
-                    tele_token, "sendPhoto"
-                ),
-                data={
-                    "chat_id": tele_chat_id,
-                    "photo": link or "https://pp.qianp.com/zidian/kai/27/65e9.png",
-                    "caption": body,
-                },
-            )
     else:
         print("You wake up late")
 
@@ -140,17 +126,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--weather_message", help="weather_message", nargs="?", default="", const=""
     )
-    parser.add_argument(
-        "--tele_token", help="tele_token", nargs="?", default="", const=""
-    )
-    parser.add_argument(
-        "--tele_chat_id", help="tele_chat_id", nargs="?", default="", const=""
-    )
     options = parser.parse_args()
     main(
         options.github_token,
         options.repo_name,
-        options.weather_message,
-        options.tele_token,
-        options.tele_chat_id,
+        options.weather_message
     )
