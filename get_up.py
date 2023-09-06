@@ -117,6 +117,8 @@ def main(
         issue.create_comment(comment)
     else:
         print("You wake up late")
+        comment = body + f"![image]({link_for_issue})"
+        issue.create_comment(comment)
 
 
 if __name__ == "__main__":
