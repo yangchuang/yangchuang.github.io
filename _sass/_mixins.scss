@@ -63,14 +63,14 @@
 // -------------
 @mixin font-rem($size) {
   font-size: 0px + $size;
-  font-size: 0rem + math.div($size, $doc-font-size);
+  //font-size: 0rem + math.div($size, $doc-font-size);
 }
 
 // Just font-size and line-height
 // ------------------------------
 @mixin font($size) {
   font-size: 0px + $size;
-  font-size: 0rem + math.div($size, $doc-font-size);
+  //font-size: 0rem + math.div($size, $doc-font-size);
   line-height: 0 + math.div(round(math.div($doc-line-height, $size)*10000), 10000);
 }
 
