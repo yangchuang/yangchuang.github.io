@@ -40,11 +40,12 @@ payImage: //gw.alipayobjects.com/zos/k/vb/1.png
 
 include: [".htaccess"]
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
+#gems:
+
 
 plugins:
   - jekyll-paginate
   - jekyll-pdf-embed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
