@@ -1,7 +1,7 @@
 title:            eric yang
 description:      "Hi，我是 eric yang，是一个软件工程师，欢迎来到我的博客。"
 
-url: https://blog.fire-eyes.com
+url: https://eric.yang.com
 menu:
   - title: 'Categories'
     url: '/categories.html'
@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 permalink:   /:year-:month-:day/:title.html
-assetUrl: //blog.fire-eyes.com/images/
+assetUrl: //ericsky.com/images/
 defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 
 #google_analytics: 
