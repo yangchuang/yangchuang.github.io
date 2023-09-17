@@ -22,7 +22,7 @@ sass:
 
 permalink:   /:year-:month-:day/:title.html
 assetUrl: //ericsky.com/images/
-defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+defaultImage: 
 
 #google_analytics: 
 #baidu_verify: 
@@ -36,7 +36,7 @@ page_layout: page
 titlecase: true
 
 showBuyCoffee: true
-payImage: //gw.alipayobjects.com/zos/k/vb/1.png
+payImage: //localhost:4000/images//buymecoffee.png
 
 include: [".htaccess"]
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]
