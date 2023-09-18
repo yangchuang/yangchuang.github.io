@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 permalink:   /:year-:month-:day/:title.html
-assetUrl: //ericsky.com/images/
+assetUrl: //static.ericsky.com/images/
 defaultImage: 
 
 #google_analytics: 
@@ -36,7 +36,7 @@ page_layout: page
 titlecase: true
 
 showBuyCoffee: true
-payImage: //localhost:4000/images//buymecoffee.png
+payImage: //static.ericsky.com/images/buymecoffee.JPG
 
 include: [".htaccess"]
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]
