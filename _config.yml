@@ -1,7 +1,7 @@
-title:            eric yang
-description:      "Hi，我是 eric yang，是一个软件工程师，欢迎来到我的博客。"
+title:            天际的技术分享
+description:      "Hi，我是天际，是一个软件工程师，欢迎来到我的博客。"
 
-url: https://ericsky.com
+url: https://skytools.cn
 menu:
   - title: 'Categories'
     url: '/categories.html'
@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 permalink:   /:year-:month-:day/:title.html
-assetUrl: //static.ericsky.com/images/
+assetUrl: //skytools.cn/images/
 defaultImage: 
 
 #google_analytics: 
@@ -36,7 +36,7 @@ page_layout: page
 titlecase: true
 
 showBuyCoffee: true
-payImage: //static.ericsky.com/images/buymecoffee.JPG
+payImage: //skytools.cn/images/buymecoffee.JPG
 
 include: [".htaccess"]
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE", "package.json","node_modules"]
