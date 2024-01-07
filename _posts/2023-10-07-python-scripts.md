@@ -4,7 +4,7 @@ title: Python工具脚本
 date: 2023-10-07 20:24:00
 feature: https://static.ericsky.com/images/2023-09-17/IMG_8425.jpg
 summary: 好记性不如烂笔头，将平时用到的一些python工具脚本存档
-categories: Python
+categories: tools
 ---
 
 **1. [<u>PNG格式图片转成JPEG格式</u>](#jump_1)**  

@@ -4,7 +4,7 @@ title: macOS命令行批量下载Twitter账号的图片及视频
 date: 2023-10-07 20:24:00
 feature: https://static.ericsky.com/images/2023-09-17/IMG_8425.jpg
 summary: 想批量下载某些Twitter账号的图片和视频，试了一些油猴脚本和浏览器插件，都是只能单个视频单张图片下载。后来在github上找到了gallery-dl这个工具，能满足我的批量下载需求。
-categories: 工具分享
+categories: tools
 ---
 
 参考 [gallery-dl](https://github.com/mikf/gallery-dl)
