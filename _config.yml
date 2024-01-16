@@ -35,7 +35,7 @@ post_layout: post
 page_layout: page
 titlecase: true
 
-showBuyCoffee: true
+showBuyCoffee: false
 payImage: //static.ericsky.com/images/buymecoffee.JPG
 
 include: [".htaccess"]
