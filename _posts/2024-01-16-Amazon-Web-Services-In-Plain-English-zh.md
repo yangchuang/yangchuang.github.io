@@ -4,7 +4,7 @@ title: Amazon 云服务（Amazon Web Services）浅显易懂的解释
 date: 2024-01-16 10:24:00
 feature: https://static.ericsky.com/images/2023-09-17/IMG_8425.jpg
 summary: Amazon 云服务（Amazon Web Services）浅显易懂的解释
-categories: Study
+categories: study
 ---
 
 嘿，你有听说过Amazon 云服务下的新产品：ContainerCache、ElastiCast和QR72吗？你当然不会听说过，因为它们是我刚刚编的😄。
