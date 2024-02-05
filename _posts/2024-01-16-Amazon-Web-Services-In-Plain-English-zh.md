@@ -2,7 +2,7 @@
 layout: post
 title: Amazon 云服务（Amazon Web Services）浅显易懂的解释
 date: 2024-01-16 10:24:00
-feature: https://static.ericsky.com/images/2023-09-17/IMG_8425.jpg
+feature: https://static.ericsky.com/images/translates/AWS-In-Plain-Text.jpeg
 summary: Amazon 云服务（Amazon Web Services）浅显易懂的解释
 categories: study
 ---
