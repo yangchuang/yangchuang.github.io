@@ -32,7 +32,7 @@ Spring AI 提供的特性包括：
 
 **以下是使用用 Spring AI 和 PGVector 构建 RAG 的一个简单示例。**
 
-1. pom.xml引入相关依赖, ${spring.ai.version} 目前版本为0.8.0-SNAPSHOT。
+1.pom.xml引入相关依赖, ${spring.ai.version} 目前版本为0.8.0-SNAPSHOT。
 
 ```xml
         <dependency>
@@ -71,7 +71,7 @@ Spring AI 提供的特性包括：
         </dependency>
 ```
 
-2. 声明相关的Bean
+2.声明相关的Bean
 
 ```java
 @Configuration
@@ -88,7 +88,7 @@ public class AIConfig {
 }
 ```
 
-3. 定义两个API，一个API用来上传pdf文件存储到PGVector，一个API用来针对pdf文件的内容向ChatGPT提问.
+3.定义两个API，一个API用来上传pdf文件存储到PGVector，一个API用来针对pdf文件的内容向ChatGPT提问.
 
 ```java
 @RestController
@@ -157,7 +157,7 @@ public class RAGController {
 }
 ```
 
-4. 使用Docker启动Postgres & PGVector
+4.使用Docker启动Postgres & PGVector
 
 ```bash
 docker pull ankane/pgvector
@@ -165,7 +165,7 @@ docker pull ankane/pgvector
 docker run -d --name postgres_spring_ai -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres ankane/pgvector
 ```
 
-5. 连上数据库，创建向量存储表
+5.连上数据库，创建向量存储表
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -182,11 +182,11 @@ CREATE TABLE IF NOT EXISTS vector_store (
 CREATE INDEX ON vector_store USING HNSW (embedding vector_cosine_ops);
 ```
 
-6. 运行项目，上传pdf文件，然后就可以针对pdf文件的内容向ChatGPT提问啦。
+6.运行项目，上传pdf文件，然后就可以针对pdf文件的内容向ChatGPT提问啦。
 
 上传pdf
 ![](../images/tech/doc_upload.png)
-GPT分析文档并给出准确的答案
+GPT通过向量数据库检索文档，总结并给出了准确的答案
 ![](../images/tech/doc_ask.png)
 
 完整代码地址：[spring_ai_example](https://github.com/yangchuang/spring_ai_example)
