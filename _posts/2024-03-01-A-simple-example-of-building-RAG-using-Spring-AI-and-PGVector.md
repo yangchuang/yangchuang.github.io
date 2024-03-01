@@ -165,7 +165,24 @@ docker pull ankane/pgvector
 docker run -d --name postgres_spring_ai -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres ankane/pgvector
 ```
 
-5. 运行项目，上传pdf文件，然后就可以针对pdf文件的内容向ChatGPT提问啦。
+5. 连上数据库，创建向量存储表
+
+```sql
+CREATE EXTENSION IF NOT EXISTS vector;
+CREATE EXTENSION IF NOT EXISTS hstore;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE IF NOT EXISTS vector_store (
+	id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+	content text,
+	metadata json,
+	embedding vector(1536)
+);
+
+CREATE INDEX ON vector_store USING HNSW (embedding vector_cosine_ops);
+```
+
+6. 运行项目，上传pdf文件，然后就可以针对pdf文件的内容向ChatGPT提问啦。
 
 上传pdf
 ![](../images/tech/doc_upload.png)
