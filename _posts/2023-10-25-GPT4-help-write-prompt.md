@@ -3,7 +3,7 @@ layout: post
 title: 使用GPT-4帮你写高质量的Prompt
 date: 2023-10-25 10:24:00
 summary: 许多人由于不知道如何撰写高质量的提示（Prompt）而感到困惑，特别是要用英语表达更加困难，很难准确地表达。可以尝试让ChatGPT来帮你写，尤其是GPT-4，它生成的内容质量相当不错。
-feature: https:/.ericsky.com/images/aigc/daily_poetry_logo.jpeg
+feature: https://ericsky.com/images/aigc/daily_poetry_logo.jpeg
 categories: share
 ---
 <a id="prompt"></a>

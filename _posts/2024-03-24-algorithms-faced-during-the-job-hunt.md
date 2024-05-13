@@ -290,6 +290,56 @@ nums 中的每个值都 独一无二
 -104 <= 目标 <= 104
 ```
 
+代码实现：
+
+```java
+class Solution {
+
+    public int search(int[] nums, int target) {
+        int len = nums.length;
+
+        if (len == 1) {
+            return nums[0] == target ? 0 : -1;
+        }
+
+        int k = this.findK(nums);
+
+        if (target >= nums[0]) {
+            return findTarget(nums, 0, len - k - 1, target);
+        } else {// 从 len - k 的位置开始找
+            return findTarget(nums, len - k, len - 1, target);
+        }
+    }
+
+    private int findTarget(int[] nums, int left, int right, int target) {
+        int index = Arrays.binarySearch(nums, left, right + 1, target);
+        return index < 0 ? -1 : index;
+    }
+
+    private int findK(int[] nums) {
+        int len = nums.length;
+
+        if (nums[0] < nums[len - 1]) {// 从0旋转，还是升序
+            return 0;
+        }
+
+        int left = 0;
+        int right = len - 1;
+        while (left != right - 1) {
+            int mid = (right - left) / 2 + left;
+            if (nums[mid] > nums[left]) {
+                left = mid;
+            } else {
+                right = mid;
+            }
+        }
+        return len - right;
+    }
+
+}
+```
+
+
 ### 技术面手撕代码3
 
 ```text
@@ -309,6 +359,67 @@ nums 中的每个值都 独一无二
 输出：[11,1,1,7]
 ```
 
+代码实现：
+应该没有什么优化的空间了
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Main m = new Main();
+        int[] p1 = new int[] {8,4,6,2,3};
+        int[] p2 = new int[] {1,2,3,4,5};
+        int[] p3 = new int[] {10,1,1,6};
+
+        int[][] samples = new int[][] {p1, p2, p3};
+
+        for (int i = 0; i < samples.length; i++) {
+            System.out.println("p" + (i+1) + ":");
+            int[] res = m.solution(samples[i]);
+            for (int j = 0; j < res.length; j++) {
+                System.out.print(res[j] + ",");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public int[] solution(int[] prices) {
+        int len = prices.length;
+
+        if (len == 1) {
+            return prices;
+        }
+        int[] res = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            int priceI = prices[i];
+
+            int priceJ = findPriceJ(prices, priceI, i, len);
+
+            res[i] = priceI + priceJ;
+        }
+        return res;
+    }
+
+    public int findPriceJ(int[] prices, int priceI, int i, int len) {
+        //从i的右边开始找j
+        for (int j = i + 1; j < len; j++) {
+            if (prices[j] < priceI) {
+                return prices[j];
+            }
+        }
+
+        //右侧找不到j，从左侧开始找
+        for (int j = 0; j < i; j++) {
+            if (prices[j] < priceI) {
+                return prices[j];
+            }
+        }
+        return 0;
+    }
+}
+```
+
 ## B公司
 
 ### 机考题
@@ -322,4 +433,7 @@ nums 中的每个值都 独一无二
 说明：a出现4次数最多，a首先输出；c和d都只出现了一次，但c在d前面，所以现输出c再输出d。
 ```
 
+
+
+## 总结
 总的来说，主要都是考一些基本的逻辑，没有考我比较头疼的动态规划之类的算法。 
